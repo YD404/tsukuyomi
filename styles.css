@@ -1,0 +1,278 @@
+body {
+    font-family: 'Meiryo', 'MS Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color: #fff;
+    /* タイトルの文字色 (白色) */
+    text-align: left;
+    /* テキストを左寄せに変更 */
+    padding: 20px;
+}
+
+header img {
+    padding: 10px 0;
+    max-height: 100px;
+    /* ロゴの最大高さを設定 */
+}
+
+.village-name {
+    font-size: 4em;
+    /* 大きな文字 */
+    font-weight: bold;
+    /* 太字 */
+    font-family: 'YuMincho', sans-serif;
+    /* 游明朝 */
+    margin-bottom: 10px;
+    /* 余白を追加 */
+    color: #000;
+    /* 文字色を黒に変更 */
+    display: inline-block;
+    /* インラインブロック要素に変更 */
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* テキストを中央寄せ */
+    background-color: rgba(234, 145, 152, 0.7);
+    /* headerの背景色を適用 */
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5em;
+    /* メニューの文字サイズを大きくする */
+    margin: 0 8px;
+    /* メニューアイテム間の距離 */
+    padding: 20px 10px;
+    /* メニューアイテムの余白を太くする */
+    white-space: nowrap;
+    /* テキストを折り返さない */
+    border-right: 1px solid #ccc;
+    /* 右側に境界線を追加 */
+}
+
+/* メディアクエリ: 画面幅が800px未満の場合 */
+@media (max-width: 800px) {
+    .menu {
+        text-align: center;
+    }
+
+    .menu a {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+        border-right: none;
+        width: 50%;
+        /* リンクの幅を50%に設定し、2つ並べる */
+        box-sizing: border-box;
+        /* ボックスサイズを含めたサイズに */
+        float: left;
+        /* 左にフロート */
+    }
+
+    .menu a:last-child {
+        border-bottom: none;
+    }
+}
+
+
+.menu a:last-child {
+    border-right: none;
+    /* 最後のリンクの境界線を削除 */
+}
+
+ul.breadcrumb {
+    padding: 10px 0;
+    list-style: none;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+    color: #000;
+    /* 文字色を黒に変更 */
+}
+
+ul.breadcrumb li+li:before {
+    content: "› ";
+}
+
+.container {
+    display: flex;
+    /* コンテナをフレックスボックスにする */
+    flex-wrap: wrap;
+    /* 要素が横幅を超えた場合、折り返す */
+}
+
+.main-content {
+    flex: 1;
+    /* メインコンテンツが残りのスペースを全て使う */
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 0 0 300px;
+    /* サイドバーの固定幅を設定 */
+    padding: 20px;
+    box-sizing: border-box;
+    /* パディングを含めたサイズにする */
+}
+
+/* メディアクエリ: 画面幅が800px未満の場合 */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        /* 縦に並べる */
+    }
+
+    .sidebar {
+        flex: 1;
+        /* サイドバーが残りのスペースを全て使う */
+    }
+}
+
+/* メディアクエリ: 画面幅が1500px以上の場合 */
+@media (min-width: 1500px) {
+    .container {
+        max-width: 1500px;
+        /* コンテナの最大幅を指定 */
+        margin: 0 auto;
+        /* 中央に配置する */
+    }
+}
+
+.title {
+    padding: 8px 0;
+    font-size: 2em;
+    /* タイトルの文字サイズ */
+    font-weight: bold;
+    margin: 12px 0;
+    background-color: rgba(234, 145, 152, 0.7);
+    /* サブタイトルの背景色を適用 */
+    color: #000;
+    /* タイトルの文字色 (白色) */
+}
+
+.subtitle {
+    font-size: 1.2em;
+    /* サブタイトルの文字サイズ */
+    font-weight: bold;
+    background-color: rgba(234, 145, 152, 0.3);
+    /* サブタイトルの背景色を少し薄く */
+    color: #000;
+    /* サブタイトルの文字色 (黒色) */
+    margin: 8px 0;
+    padding: 4px 0;
+    border-left: 12px solid rgba(234, 145, 152, 0.7);
+    /* 右側に境界線を追加 */
+}
+
+.content {
+    font-size: 1em;
+    /* 本文の文字サイズ */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #ddd;
+    /* メニューバーの背景色 */
+    padding: 20px;
+}
+
+
+footer {
+    background-color: rgba(234, 145, 152, 0.3);
+    /* フッターの背景色を変更 */
+    color: #000;
+    /* テキストの色を黒に変更 */
+    padding: 20px;
+    overflow: auto;
+    /* セクション4がセクション1の下に行かないように修正 */
+}
+
+.sitemap {
+    width: 20%;
+    /* サイトマップの幅を微調整 */
+    float: left;
+    padding: 0 10px;
+    margin-right: 1%;
+    /* セクション間の間隔を設定 */
+}
+
+.sitemap h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #000;
+    /* タイトルのテキストの色を黒に変更 */
+}
+
+.sitemap ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sitemap ul li {
+    margin-bottom: 5px;
+}
+
+.sitemap ul li a {
+    color: #000;
+    /* リンクのテキストの色を黒に変更 */
+    text-decoration: none;
+}
+
+.sitemap ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.copyright {
+    background-color: #000;
+    color: #fff;
+    text-align: left;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    /* ロゴと連絡先を左右に配置 */
+    align-items: center;
+    /* 縦方向の中央揃え */
+}
+
+.logo img {
+    max-height: 140px;
+    /* ロゴの最大高さを設定 */
+    margin-right: 20px;
+    /* ロゴの左側に余白を追加 */
+}
+
+.contact {
+    text-align: left;
+    /* 連絡先を右寄せに */
+    max-width: 80%;
+    /* 連絡先の最大幅を設定 */
+}
+
+/* メディアクエリ: 画面幅が800px未満の場合 */
+@media (max-width: 800px) {
+    .copyright {
+        text-align: center;
+        /* テキストを中央に配置 */
+    }
+
+    .logo,
+    .contact {
+        margin-bottom: 20px;
+        /* ロゴとコンタクトの間に余白を追加 */
+    }
+
+    .logo img {
+        max-width: 100%;
+        /* ロゴの最大幅を100%に */
+    }
+}
